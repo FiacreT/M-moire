@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<records>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <record/>
+    <scaninfo arguments="dnsrecon.py -d zonetransfer.me -a --xml /home/fiacre/Python-Project/dnsrecon-master/firtsTest-xml" time="2019-05-27 16:54:23.797060"/>
+    <domain domain_name="zonetransfer.me"/>
+</records>

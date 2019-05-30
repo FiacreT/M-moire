@@ -1,0 +1,3 @@
+[console_scripts]
+wappalyze = wappalyze.wappalyze:main
+
