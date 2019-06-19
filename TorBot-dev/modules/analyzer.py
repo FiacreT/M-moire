@@ -18,7 +18,7 @@ class LinkTree:
         tld (bool): Decides whether or not to use additional top-level-domains besides .tor
         stop_depth (int): Depth of which to stop searching for links
     """
-    def __init__(self, root_node, *, stop_depth=1):
+    def __init__(self, root_node, stop_depth=1):
         self._tree = build_tree(root_node, stop=stop_depth)
 
     def __len__(self):

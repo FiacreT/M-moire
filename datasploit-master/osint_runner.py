@@ -18,28 +18,43 @@ def run(component, module_dir, m_input, output = None):
     active_modules = OrderedDict()
     for index, i in enumerate(domain_files):
         module_name = os.path.basename(os.path.splitext(i)[0])
-        #print("module name", module_name)
+        print("module name", module_name)
         x = importlib.import_module(module_name)
-        #print("lib", x)
+        print("lib", x)
         if not x.ENABLED:
             print ("[-] Skipping %s because it is marked as disabled." % module_name.split("_")[1].title())
         else:
             active_modules[os.path.basename(os.path.splitext(i)[0])] = x
 
     json_output = {}
+    tab_modules = list(active_modules.iteritems())
+    print("/////////////////////////////////////////////////////////////////////////")
+    for i in range(len(tab_modules)):
+        temp = str(tab_modules[i]).split(',')[0]
+        temp = temp.replace("'", "")
+        temp = temp.replace('(', '')
+        tab_modules[i] = temp
+        print(tab_modules[i])
+    
 
     for name, x in active_modules.iteritems():
         #print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",x)
+
         if "banner" in dir(x):
             x.banner()
         data = x.main(m_input)
         #print ("*************************************************************", data)
         if data:
             x.output(data, m_input)
-            datas.append(data)
+            for mod in tab_modules:
+                if(mod in str(x)):
+                    print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",str(x))
+                    datas.append({mod:data})
+            
+            #if any(ext in str(x) for ext in tab_modules):
+                
             #print ("*************************************************************", data)
     
-    #print("tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttailllllllllllllle", len(datas))
     if output and str(output).lower() == "text":
         try:
             if x.WRITE_TEXT_FILE:

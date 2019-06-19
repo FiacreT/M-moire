@@ -2,7 +2,7 @@
 
 import dep_check
 #dep_check.check_dependency()
-
+import json
 import re
 import sys
 import shutil
@@ -118,6 +118,7 @@ class Datasploit(Resource):
                     "data": data
                 }
                 results.append(result)
+                return result
         except SystemExit:
             print ("exiting")
         except AddrFormatError:
@@ -132,6 +133,7 @@ class Datasploit(Resource):
                     "data": data
                 }
                 results.append(result)
+                return result
             elif get_tld(target, fix_protocol=True,fail_silently=True) is not None:
                 print ("Looks like a DOMAIN, running domainOsint...\n")
                 data = domainOsint.run(target, output)
@@ -143,6 +145,7 @@ class Datasploit(Resource):
                     "data": data
                 }
                 results.append(result)
+                return result
             else:
                 print ("Nothing Matched assuming username, running usernameOsint...\n")
                 data = usernameOsint.run(target, output)
@@ -154,10 +157,11 @@ class Datasploit(Resource):
                     "data": data
                 }
                 results.append(result)
+                return result
         
         except:
             print ("Unknown Error Occured")
-        return "result", 201
+        return result, 201
 
     def get(self, target):
         

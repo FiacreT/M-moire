@@ -249,7 +249,7 @@ class SiteDetailOutput(object):
                     siteimpprop = site.getImportantProperty(0)
                     if target != site.Target:
                         print "\n____________________     Results found for: " + site.Target + "     ____________________"
-                            result = result + "\n____________________     Results found for: " + site.Target + "     ____________________"
+                        result = result + "\n____________________     Results found for: " + site.Target + "     ____________________"
                         target = site.Target
                     if siteimpprop is None or len(siteimpprop) == 0:
                         print "No results found in the " + site.FriendlyName

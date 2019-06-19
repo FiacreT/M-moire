@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 The Automater.py module defines the main() function for Automater.
 
@@ -104,6 +104,7 @@ class Automater(Resource):
                     targetlist.append(tgtstrstripped)
         else:  # one target or list of range of targets added on console
             #target = parser.Target
+            
             target = cible
             #print("---------------------------------------------------------------------------------------------")
             #print(target)

@@ -4,7 +4,7 @@ MAIN MODULE
 import argparse
 import socket
 import socks
-
+import json
 from requests.exceptions import HTTPError
 
 from modules.analyzer import LinkTree

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 #    DNSRecon
@@ -499,9 +499,12 @@ class Dnsrecon(Resource):
         # Check if wildcard resolution is enabled
         wildcard_ip = self.check_wildcard(res, dom)
         if wildcard_ip and not ignore_wildcard:
-            print_status("Do you wish to continue? y/n")
-            continue_brt = str(sys.stdin.readline()[:-1])
-        if re.search(r"y", continue_brt, re.I):
+            #print_status("Do you wish to continue? y/n")
+            #continue_brt = str(sys.stdin.readline()[:-1])
+            #print(continue_brt)
+            #continue_brt = "y"
+            #exit()
+        #if re.search(r"y", continue_brt, re.I):
             # Check if Dictionary file exists
 
             if os.path.isfile(dict):
@@ -1122,13 +1125,16 @@ class Dnsrecon(Resource):
 
             # Do Bing Search enumeration if selected
             if do_bing:
-                print_status("Performing Bing Search Enumeration")
-                bing_rcd = self.se_result_process(res, scrape_bing(domain))
-                if bing_rcd:
-                    for r in bing_rcd:
-                        if "address" in bing_rcd:
-                            ip_for_whois.append(r["address"])
-                    returned_records.extend(bing_rcd)
+                try:
+                    print_status("Performing Bing Search Enumeration")
+                    bing_rcd = self.se_result_process(res, scrape_bing(domain))
+                    if bing_rcd:
+                        for r in bing_rcd:
+                            if "address" in bing_rcd:
+                                ip_for_whois.append(r["address"])
+                        returned_records.extend(bing_rcd)
+                except:
+                    pass
 
             if do_crt:
                 print_status("Performing Crt.sh Search Enumeration")
@@ -1712,10 +1718,13 @@ class Dnsrecon(Resource):
                             returned_records.extend(goo_enum_records)
 
                     elif r == "bing":
-                        print_status("Performing Bing Search Enumeration against {0}".format(domain))
-                        bing_enum_records = self.se_result_process(res, scrape_bing(domain))
-                        if (output_file is not None) or (results_db is not None) or (csv_file is not None) or (json_file is not None):
-                            returned_records.extend(bing_enum_records)
+                        try:
+                            print_status("Performing Bing Search Enumeration against {0}".format(domain))
+                            bing_enum_records = self.se_result_process(res, scrape_bing(domain))
+                            if (output_file is not None) or (results_db is not None) or (csv_file is not None) or (json_file is not None):
+                                returned_records.extend(bing_enum_records)
+                        except:
+                            pass
 
                     elif r == "crt":
                         print_status("Performing Crt.sh Search Enumeration against {0}".format(domain))

@@ -104,4 +104,4 @@ if __name__ == "__main__":
     except Exception as e:
         print (e)
         traceback.print_exc()
-        print ("Please provide a username as argument"
+        print ("Please provide a username as argument")

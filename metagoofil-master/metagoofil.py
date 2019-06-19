@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 from discovery import googlesearch
 from extractors import *
 import urllib
@@ -8,6 +9,7 @@ import sys
 import getopt
 import warnings
 import htmlExport
+import socket
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
 
@@ -114,52 +116,56 @@ class Metagoofil(Resource):
             print "\n[-] Starting online search..."
             for filetype in filetypes:
                 print "\n[-] Searching for "+ filetype + " files, with a limit of " + str(limit)
-                search = googlesearch.search_google(word, limit, start, filetype)
-                search.process_files()
-                files = search.get_files()
-                print "Results: " + str(len(files)) + " files found"
-                print "Starting to download " + str(filelimit) + " of them:"
-                print "----------------------------------------\n"
-                counter = 1
-                for x in files:
-                    if counter <= filelimit:
-                        print "[" + str(counter) + "/" + str(filelimit) + "] " + x
-                        getfile = downloader.downloader(x, dir)
-                        getfile.down()
-                        filename = getfile.name()
-                        if filename != "":
-                            if filetype == "pdf":
-                                test = metadataPDF.metapdf(dir + "/" + filename, password)
-                            elif filetype == "doc" or filetype == "ppt" or filetype == "xls":
-                                test = metadataMSOffice.metaMs2k(dir + "/" + filename)
-                                if os.name == "posix":
-                                    testex = metadataExtractor.metaExtractor(dir + "/" + filename)
-                            elif filetype == "docx" or filetype == "pptx" or filetype == "xlsx":
-                                test = metadataMSOfficeXML.metaInfoMS(dir + "/" + filename)
-                            res = test.getData()
-                            if res == "ok":
-                                raw = test.getRaw()
-                                users = test.getUsers()
-                                paths = test.getPaths()
-                                soft = test.getSoftware()
-                                email = []
-                                if filetype == "pdf" or filetype == "docx":
-                                    res = test.getTexts()
-                                    if res == "ok":
-                                        email = test.getEmails()
-                                        for em in email:
-                                            emails.append(em)
-                                    else:
-                                        email = []
-                                        failedfiles.append(x + ":" + str(res))
-                                respack=[x, users, paths, soft, raw, email]
-                                all.append(respack)
+                try:
+                    search = googlesearch.search_google(word, limit, start, filetype)
+                    search.process_files()
+                    files = search.get_files()
+                    print "Results: " + str(len(files)) + " files found"
+                    print "Starting to download " + str(filelimit) + " of them:"
+                    print "----------------------------------------\n"
+                    counter = 1
+                
+                    for x in files:
+                        if counter <= filelimit:
+                            print "[" + str(counter) + "/" + str(filelimit) + "] " + x
+                            getfile = downloader.downloader(x, dir)
+                            getfile.down()
+                            filename = getfile.name()
+                            if filename != "":
+                                if filetype == "pdf":
+                                    test = metadataPDF.metapdf(dir + "/" + filename, password)
+                                elif filetype == "doc" or filetype == "ppt" or filetype == "xls":
+                                    test = metadataMSOffice.metaMs2k(dir + "/" + filename)
+                                    if os.name == "posix":
+                                        testex = metadataExtractor.metaExtractor(dir + "/" + filename)
+                                elif filetype == "docx" or filetype == "pptx" or filetype == "xlsx":
+                                    test = metadataMSOfficeXML.metaInfoMS(dir + "/" + filename)
+                                res = test.getData()
+                                if res == "ok":
+                                    raw = test.getRaw()
+                                    users = test.getUsers()
+                                    paths = test.getPaths()
+                                    soft = test.getSoftware()
+                                    email = []
+                                    if filetype == "pdf" or filetype == "docx":
+                                        res = test.getTexts()
+                                        if res == "ok":
+                                            email = test.getEmails()
+                                            for em in email:
+                                                emails.append(em)
+                                        else:
+                                            email = []
+                                            failedfiles.append(x + ":" + str(res))
+                                    respack=[x, users, paths, soft, raw, email]
+                                    all.append(respack)
+                                else:
+                                    failedfiles.append(x + ":" + str(res))
+                                    print "\t [x] Error in the parsing process" #A error in the parsing process
                             else:
-                                failedfiles.append(x + ":" + str(res))
-                                print "\t [x] Error in the parsing process" #A error in the parsing process
-                        else:
-                            pass
-                    counter += 1
+                                pass
+                        counter += 1
+                except socket.error, ex:
+                    print ex
         else:
             print "[-] Starting local analysis in directory " + dir
             dirList = os.listdir(dir)
