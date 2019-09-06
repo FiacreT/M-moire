@@ -1,0 +1,9 @@
+www.antic.cm
+bd.antic.cm
+cirt.antic.cm
+dns1.antic.cm
+dns2.antic.cm
+mail.antic.cm
+www.mail.antic.cm
+survey.antic.cm
+testweb.antic.cm

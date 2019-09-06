@@ -4,6 +4,9 @@ import psycopg2
 import ast
 import json
 import re
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
 
 class RequestApi:
     url = ''
@@ -831,13 +834,44 @@ def request_datasploit(target):
     
 
 
+
+@app.route('/', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'GET':
+        # afficher le formulaire
+        return render_template('search_osint.html')
+    else:
+        # traiter les données reçues
+        result = request.form
+        print(result)
+
+
+
+
+
+if __name__ == '__main__':
+   app.run(debug = True)
+
+
+
+
+'''
 if __name__ == '__main__':
     
     #request to torBot
-    '''torBotApi = RequestApi('torBot/torlinkbgs6aabns.onion')
-    torBotApi.postApi()'''
+    torBotApi = RequestApi('torBot/torlinkbgs6aabns.onion')
+    torBotApi.postApi()
 
-    request_torBot("torlinkbgs6aabns.onion")
+    request_torBot("torlinkbgs6aabns.onion")'''
+
+
+
+
+
+
+
+
+
 
 
     

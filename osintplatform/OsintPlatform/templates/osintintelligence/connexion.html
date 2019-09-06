@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Material Design Bootstrap -->
+		<link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+		<link href="css/mdb.min.css" rel="stylesheet">
+		<!-- Your custom styles (optional) 
+		<link href="{% static 'css/mdbpro/mdbpro.css' %}" rel="stylesheet">-->
+		<link href="{% static 'css/style_mdb.css' %}" rel="stylesheet">
+		
+		<link href="css/style_mdb.css" rel="stylesheet">
+
+		
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<!--
+		<link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		-->
+		<link href="{% static 'css/datepicker.min.css' %}" rel="stylesheet">
+		<link href="css/datepicker.min.css" rel="stylesheet">
+
+		<link href="{% static 'css/select.css' %}" rel="stylesheet">
+		<link href="css/select.css" rel="stylesheet">
+		<title>Sensor Management - Connexion</title>
+	</head>
+	<body style="background-color: rgb(77, 204, 134);">
+
+
+		<div  class= "form-connexion">
+
+
+				<!-- Default form login -->
+			<form class="text-center border border-light p-5" style="border-radius: 10px; ">
+
+			    <p class="h4 mb-4" style="font-family: benton-sans,'Helvetica Neue',helvetica,arial,sans-serif; color : rgb(77, 204, 134);">Log in to your account</p>
+
+			    <!-- Email -->
+				<select class="browser-default custom-select" style="width: 60%">
+					<option selected>User</option>
+					<option value="1">Enqueteur</option>
+					<option value="2">Administrateur</option>
+				  </select><br/><br/><br/>
+
+			    <!-- Password -->
+			    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+
+			    <!-- Sign in button -->
+			    <button class="btn btn-info btn-block my-4" type="submit" style="background-color: rgb(77, 204, 134); width: 60%; margin-left:auto; margin-right:auto;">Sign in</button>
+
+			    
+			   
+			</form>
+			<!-- Default form login -->
+
+
+		</div>
+
+				
+
+
+	</body>
+</html>

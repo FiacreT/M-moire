@@ -1,0 +1,850 @@
+------------------------------------------
+True
+True
+dictionaries/common_tlds.dict
+<class 'str'>
+dictionaries/common_tlds.dict
+json
+True
+[
+    {
+        "dns-a": [
+            "154.126.129.10",
+            "154.126.129.11",
+            "197.159.20.138"
+        ],
+        "dns-mx": [
+            "mail.antic.cm"
+        ],
+        "dns-ns": [
+            "dns1.antic.cm",
+            "dns2.antic.cm"
+        ],
+        "domain-name": "antic.cm",
+        "fuzzer": "original*",
+        "geoip-country": "Cameroon"
+    },
+    {
+        "dns-a": [
+            "103.82.53.94"
+        ],
+        "domain-name": "ant.ic.cm",
+        "fuzzer": "subdomain"
+    },
+    {
+        "dns-a": [
+            "104.160.171.71"
+        ],
+        "domain-name": "anti.c.cm",
+        "fuzzer": "subdomain",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "192.162.85.187"
+        ],
+        "dns-mx": [
+            "mailgate01.dogado.net",
+            "mailgate02.dogado.net"
+        ],
+        "dns-ns": [
+            "ns1.dogado.de",
+            "ns2.dogado.de",
+            "ns3.dogado.de",
+            "ns4.dogado.de"
+        ],
+        "domain-name": "antic.com",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "66.49.204.205"
+        ],
+        "dns-mx": [
+            "antic.org"
+        ],
+        "dns-ns": [
+            "ns.canaca.net",
+            "ns2.canaca.net"
+        ],
+        "domain-name": "antic.org",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Canada"
+    },
+    {
+        "dns-a": [
+            "91.195.240.93"
+        ],
+        "dns-ns": [
+            "parking1.nic.ru",
+            "parking2.nic.ru"
+        ],
+        "domain-name": "antic.ru",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "35.186.238.101"
+        ],
+        "dns-ns": [
+            "ns1.namefind.com",
+            "ns2.namefind.com"
+        ],
+        "domain-name": "antic.net",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "185.53.178.7"
+        ],
+        "dns-mx": [
+            "mail.h-email.net"
+        ],
+        "dns-ns": [
+            "ns1.parkingcrew.net",
+            "ns2.parkingcrew.net"
+        ],
+        "domain-name": "antic.de",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "75.126.57.130"
+        ],
+        "domain-name": "antic.uk",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "185.53.179.6"
+        ],
+        "dns-mx": [
+            "mail.h-email.net"
+        ],
+        "dns-ns": [
+            "ns1.parkingcrew.net",
+            "ns2.parkingcrew.net"
+        ],
+        "domain-name": "antic.it",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "185.253.212.22"
+        ],
+        "dns-mx": [
+            "mail.mailerhost.net"
+        ],
+        "dns-ns": [
+            "ns1.aftermarket.pl",
+            "ns2.aftermarket.pl"
+        ],
+        "domain-name": "antic.pl",
+        "fuzzer": "tld-swap"
+    },
+    {
+        "dns-a": [
+            "213.186.33.19"
+        ],
+        "dns-mx": [
+            "mx1.ovh.net",
+            "mx2.ovh.net",
+            "mxb.ovh.net"
+        ],
+        "dns-ns": [
+            "dns16.ovh.net",
+            "ns16.ovh.net"
+        ],
+        "domain-name": "antic.fr",
+        "fuzzer": "tld-swap",
+        "geoip-country": "France"
+    },
+    {
+        "dns-a": [
+            "217.160.231.196"
+        ],
+        "dns-mx": [
+            "mx00.schlund.de",
+            "mx01.schlund.de"
+        ],
+        "dns-ns": [
+            "ns1046.ui-dns.biz",
+            "ns1046.ui-dns.com",
+            "ns1046.ui-dns.de",
+            "ns1046.ui-dns.org"
+        ],
+        "domain-name": "antic.info",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "81.95.96.29"
+        ],
+        "dns-ns": [
+            "alfa.ns.active24.cz",
+            "beta.ns.active24.cz",
+            "gama.ns.active24.sk"
+        ],
+        "domain-name": "antic.cz",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Czech Republic"
+    },
+    {
+        "dns-a": [
+            "94.124.122.8"
+        ],
+        "dns-aaaa": [
+            "2a02:9e0:9000::8"
+        ],
+        "dns-mx": [
+            "mx.bhosted.nl"
+        ],
+        "dns-ns": [
+            "ns1.bhosted.nl",
+            "ns3.bhosted.nl",
+            "ns4.bhosted.nl"
+        ],
+        "domain-name": "antic.nl",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Netherlands"
+    },
+    {
+        "dns-a": [
+            "217.76.142.101"
+        ],
+        "dns-mx": [
+            "mx.serviciodecorreo.es"
+        ],
+        "dns-ns": [
+            "dns1.serv313421.servidoresdns.net",
+            "dns2.serv313421.servidoresdns.net"
+        ],
+        "domain-name": "antic.es",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Spain"
+    },
+    {
+        "dns-a": [
+            "185.53.179.8"
+        ],
+        "dns-mx": [
+            "mail.h-email.net"
+        ],
+        "dns-ns": [
+            "ns1.parkingcrew.net",
+            "ns2.parkingcrew.net"
+        ],
+        "domain-name": "antic.kr",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "88.151.96.8"
+        ],
+        "dns-mx": [
+            "mail.atw.hu",
+            "mail2.atw.hu",
+            "sp000.m.atw.hu",
+            "sp001.m.atw.hu",
+            "sp002.m.atw.hu",
+            "sp003.m.atw.hu",
+            "sp004.m.atw.hu",
+            "sp005.m.atw.hu",
+            "sp006.m.atw.hu",
+            "sp007.m.atw.hu",
+            "sp008.m.atw.hu",
+            "sp009.m.atw.hu"
+        ],
+        "dns-ns": [
+            "ns1.atw.hu",
+            "ns5.atw.hu"
+        ],
+        "domain-name": "antic.eu",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Hungary"
+    },
+    {
+        "dns-a": [
+            "50.63.202.42"
+        ],
+        "dns-mx": [
+            "mailstore1.secureserver.net",
+            "smtp.secureserver.net"
+        ],
+        "dns-ns": [
+            "ns57.domaincontrol.com",
+            "ns58.domaincontrol.com"
+        ],
+        "domain-name": "antic.co",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "212.60.42.238"
+        ],
+        "dns-mx": [
+            "esg.sallfort.com",
+            "esg2.sallfort.com"
+        ],
+        "dns-ns": [
+            "ns1.sallfort.com",
+            "ns2.sallfort.com",
+            "ns3.sallfort.com",
+            "ns4.sallfort.com"
+        ],
+        "domain-name": "antic.ch",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Switzerland"
+    },
+    {
+        "dns-a": [
+            "194.9.94.85",
+            "194.9.94.86"
+        ],
+        "dns-mx": [
+            "mail2.loopia.se",
+            "mailcluster.loopia.se"
+        ],
+        "dns-ns": [
+            "ns1.loopia.se",
+            "ns2.loopia.se"
+        ],
+        "domain-name": "antic.se",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Sweden"
+    },
+    {
+        "dns-a": [
+            "188.212.255.103"
+        ],
+        "dns-mx": [
+            "antic.ro"
+        ],
+        "dns-ns": [
+            "ns.clausweb.ro",
+            "ns.registar.ro",
+            "ns.romania-webhosting.com"
+        ],
+        "domain-name": "antic.ro",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Romania"
+    },
+    {
+        "dns-a": [
+            "185.53.177.20"
+        ],
+        "dns-mx": [
+            "mail.antic.at"
+        ],
+        "dns-ns": [
+            "dns1.a1.net",
+            "dns2.a1.net",
+            "dns3.a1.net"
+        ],
+        "domain-name": "antic.at",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "213.186.33.3"
+        ],
+        "dns-mx": [
+            "mx1.ovh.net",
+            "mx2.ovh.net",
+            "mxb.ovh.net"
+        ],
+        "dns-ns": [
+            "dns.ovh.net",
+            "ns.ovh.net"
+        ],
+        "domain-name": "antic.be",
+        "fuzzer": "tld-swap",
+        "geoip-country": "France"
+    },
+    {
+        "dns-a": [
+            "46.4.113.74"
+        ],
+        "dns-mx": [
+            "vip-mail.superhosting.cz"
+        ],
+        "dns-ns": [
+            "ns.qxp.sk",
+            "ns2.qxp.sk"
+        ],
+        "domain-name": "antic.sk",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "194.9.94.85",
+            "194.9.94.86"
+        ],
+        "dns-ns": [
+            "ns1.loopia.se",
+            "ns2.loopia.se"
+        ],
+        "domain-name": "antic.dk",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Sweden"
+    },
+    {
+        "dns-mx": [
+            "antic-io.mail.protection.outlook.com"
+        ],
+        "dns-ns": [
+            "ns-1321.awsdns-37.org",
+            "ns-1906.awsdns-46.co.uk",
+            "ns-201.awsdns-25.com",
+            "ns-969.awsdns-57.net"
+        ],
+        "domain-name": "antic.io",
+        "fuzzer": "tld-swap"
+    },
+    {
+        "dns-a": [
+            "74.208.37.209"
+        ],
+        "dns-aaaa": [
+            "2607:f1c0:1000:c0:4b27:2a41:9a44:a01c"
+        ],
+        "dns-mx": [
+            "mx00.1and1.com",
+            "mx01.1and1.com"
+        ],
+        "dns-ns": [
+            "ns1022.ui-dns.com",
+            "ns1035.ui-dns.biz",
+            "ns1048.ui-dns.org",
+            "ns1119.ui-dns.de"
+        ],
+        "domain-name": "antic.me",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "199.21.115.108"
+        ],
+        "dns-mx": [
+            "mxin.mxes.net"
+        ],
+        "dns-ns": [
+            "ns-148-c.gandi.net",
+            "ns-167-b.gandi.net",
+            "ns-178-a.gandi.net"
+        ],
+        "domain-name": "antic.us",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "90.229.220.30"
+        ],
+        "dns-ns": [
+            "ns1.loopia.se",
+            "ns2.loopia.se"
+        ],
+        "domain-name": "antic.biz",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Sweden"
+    },
+    {
+        "dns-a": [
+            "69.172.201.153"
+        ],
+        "dns-mx": [
+            "mx247.in-mx.com",
+            "mx247.in-mx.net"
+        ],
+        "dns-ns": [
+            "ns1.uniregistrymarket.link",
+            "ns2.uniregistrymarket.link"
+        ],
+        "domain-name": "antic.xyz",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States",
+        "mx-spy": true
+    },
+    {
+        "dns-a": [
+            "92.53.126.205"
+        ],
+        "dns-aaaa": [
+            "2a03:6f00:1::5c35:7ecd"
+        ],
+        "dns-mx": [
+            "mx1.timeweb.ru",
+            "mx2.timeweb.ru"
+        ],
+        "dns-ns": [
+            "ns1.timeweb.ru",
+            "ns2.timeweb.ru",
+            "ns3.timeweb.org",
+            "ns4.timeweb.org"
+        ],
+        "domain-name": "antic.club",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Russian Federation"
+    },
+    {
+        "dns-a": [
+            "91.234.194.249"
+        ],
+        "dns-mx": [
+            "antic.pro"
+        ],
+        "dns-ns": [
+            "cpanel3.lws-hosting.com",
+            "cpanel4.lws-hosting.com"
+        ],
+        "domain-name": "antic.pro",
+        "fuzzer": "tld-swap",
+        "geoip-country": "France"
+    },
+    {
+        "dns-a": [
+            "185.199.108.153",
+            "185.199.109.153",
+            "185.199.110.153",
+            "185.199.111.153"
+        ],
+        "dns-ns": [
+            "dns10.hichina.com",
+            "dns9.hichina.com"
+        ],
+        "domain-name": "antic.cc",
+        "fuzzer": "tld-swap"
+    },
+    {
+        "dns-a": [
+            "198.50.252.64"
+        ],
+        "dns-mx": [
+            "mail.antic.rs"
+        ],
+        "dns-ns": [
+            "ns1.onlydomains.com",
+            "ns2.onlydomains.com",
+            "ns3.onlydomains.com"
+        ],
+        "domain-name": "antic.rs",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Canada",
+        "mx-spy": true
+    },
+    {
+        "dns-a": [
+            "87.236.22.199"
+        ],
+        "dns-mx": [
+            "mx.yandex.net"
+        ],
+        "dns-ns": [
+            "ns1.beget.com",
+            "ns1.beget.pro",
+            "ns1.beget.ru",
+            "ns2.beget.com",
+            "ns2.beget.pro",
+            "ns2.beget.ru"
+        ],
+        "domain-name": "antic.su",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Russian Federation"
+    },
+    {
+        "dns-a": [
+            "45.79.222.138"
+        ],
+        "domain-name": "antic.ph",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "217.76.128.35"
+        ],
+        "dns-mx": [
+            "mx.serviciodecorreo.es"
+        ],
+        "dns-ns": [
+            "dns33.servidoresdns.net",
+            "dns34.servidoresdns.net"
+        ],
+        "domain-name": "antic.cat",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Spain"
+    },
+    {
+        "dns-a": [
+            "184.168.221.60"
+        ],
+        "dns-mx": [
+            "mailstore1.secureserver.net",
+            "smtp.secureserver.net"
+        ],
+        "dns-ns": [
+            "ns11.domaincontrol.com",
+            "ns12.domaincontrol.com"
+        ],
+        "domain-name": "antic.mobi",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "194.9.94.85",
+            "194.9.94.86"
+        ],
+        "dns-mx": [
+            "mail2.loopia.se",
+            "mailcluster.loopia.se"
+        ],
+        "dns-ns": [
+            "ns1.loopia.se",
+            "ns2.loopia.se"
+        ],
+        "domain-name": "antic.nu",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Sweden"
+    },
+    {
+        "dns-a": [
+            "145.14.144.210"
+        ],
+        "dns-aaaa": [
+            "2a02:4780:dead:b3e5::1"
+        ],
+        "dns-ns": [
+            "ns01.000webhost.com",
+            "ns02.000webhost.com"
+        ],
+        "domain-name": "antic.ml",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Netherlands"
+    },
+    {
+        "dns-mx": [
+            "ouchkat2.inwi.ma",
+            "tensift.wanadoo.net.ma"
+        ],
+        "dns-ns": [
+            "loukos2.wanacorp.com",
+            "ns2.wanamaroc.com",
+            "ns3.wanamaroc.com"
+        ],
+        "domain-name": "antic.ma",
+        "fuzzer": "tld-swap"
+    },
+    {
+        "dns-a": [
+            "98.142.107.146"
+        ],
+        "dns-mx": [
+            "mx.zoho.com",
+            "mx2.zoho.com",
+            "mx3.zoho.com"
+        ],
+        "dns-ns": [
+            "ns1.ecom.lankahost.net",
+            "ns2.ecom.lankahost.net"
+        ],
+        "domain-name": "antic.lk",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "64.70.19.203"
+        ],
+        "domain-name": "antic.ws",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "78.46.75.139"
+        ],
+        "dns-mx": [
+            "antic.ba"
+        ],
+        "dns-ns": [
+            "dns.fakat.net",
+            "dns2.fakat.net",
+            "dns3.fakat.net",
+            "dns4.fakat.net"
+        ],
+        "domain-name": "antic.ba",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "199.59.242.151"
+        ],
+        "domain-name": "antic.ga",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "199.59.242.151"
+        ],
+        "dns-ns": [
+            "ns1.myhostadmin.net",
+            "ns2.myhostadmin.net",
+            "ns3.myhostadmin.net",
+            "ns4.myhostadmin.net",
+            "ns5.myhostadmin.net",
+            "ns6.myhostadmin.net"
+        ],
+        "domain-name": "antic.tech",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "176.123.0.20"
+        ],
+        "dns-mx": [
+            "mail.antic.md",
+            "mail.antic.md"
+        ],
+        "dns-ns": [
+            "ns1.hosting.alexhost.md",
+            "ns2.hosting.alexhost.md"
+        ],
+        "domain-name": "antic.md",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Moldova"
+    },
+    {
+        "dns-a": [
+            "198.74.54.240"
+        ],
+        "domain-name": "antic.fm",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "173.230.141.80"
+        ],
+        "domain-name": "antic.la",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "91.195.240.94"
+        ],
+        "dns-ns": [
+            "ns1lmy.name.com",
+            "ns2gtx.name.com",
+            "ns3gnv.name.com",
+            "ns4blx.name.com"
+        ],
+        "domain-name": "antic.media",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    },
+    {
+        "dns-a": [
+            "155.133.138.11"
+        ],
+        "dns-aaaa": [
+            "2001:4b98:dc5:253::11"
+        ],
+        "dns-mx": [
+            "fb.mail.gandi.net",
+            "spool.mail.gandi.net"
+        ],
+        "dns-ns": [
+            "ns-144-b.gandi.net",
+            "ns-161-a.gandi.net",
+            "ns-49-c.gandi.net"
+        ],
+        "domain-name": "antic.app",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Poland"
+    },
+    {
+        "dns-a": [
+            "103.10.239.82"
+        ],
+        "dns-mx": [
+            "antic.click"
+        ],
+        "dns-ns": [
+            "ns11.value-domain.com",
+            "ns12.value-domain.com",
+            "ns13.value-domain.com"
+        ],
+        "domain-name": "antic.click",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Hong Kong"
+    },
+    {
+        "dns-a": [
+            "184.168.221.42"
+        ],
+        "dns-mx": [
+            "alt1.aspmx.l.google.com",
+            "alt2.aspmx.l.google.com",
+            "aspmx.l.google.com",
+            "aspmx2.googlemail.com",
+            "aspmx3.googlemail.com"
+        ],
+        "dns-ns": [
+            "ns17.domaincontrol.com",
+            "ns18.domaincontrol.com"
+        ],
+        "domain-name": "antic.games",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "198.54.117.197",
+            "198.54.117.198",
+            "198.54.117.199",
+            "198.54.117.200"
+        ],
+        "dns-ns": [
+            "dns101.registrar-servers.com",
+            "dns102.registrar-servers.com"
+        ],
+        "domain-name": "antic.technology",
+        "fuzzer": "tld-swap",
+        "geoip-country": "United States"
+    },
+    {
+        "dns-a": [
+            "80.237.195.169"
+        ],
+        "dns-mx": [
+            "mail.xtek.host"
+        ],
+        "dns-ns": [
+            "b.ns14.net",
+            "c.ns14.net",
+            "d.ns14.net",
+            "ns.xtek.de"
+        ],
+        "domain-name": "antic.gallery",
+        "fuzzer": "tld-swap",
+        "geoip-country": "Germany"
+    }
+]

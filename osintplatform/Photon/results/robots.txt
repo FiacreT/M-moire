@@ -1,0 +1,16 @@
+http://antic.cm/modules/
+http://antic.cm/logs/
+http://antic.cm/tmp/
+http://antic.cm/language/
+http://antic.cm/templates/
+http://antic.cm/cli/
+http://antic.cm/includes/
+http://antic.cm/joomla/administrator/
+http://antic.cm/libraries/
+http://antic.cm/administrator/
+http://antic.cm/images/
+http://antic.cm/components/
+http://antic.cm/media/
+http://antic.cm/installation/
+http://antic.cm/cache/
+http://antic.cm/plugins/

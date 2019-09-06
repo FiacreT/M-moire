@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sensor Mangement - home page</title>
+  {% load static %}
+  <!-- Font Awesome -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) 
+  <link href="{% static 'css/mdbpro/mdbpro.css' %}" rel="stylesheet">-->
+  <link href="{% static 'css/style_mdb.css' %}" rel="stylesheet">
+  <link href="css/style_mdb.css" rel="stylesheet">
+
+  
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+-->
+<link href="{% static 'css/datepicker.min.css' %}" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+
+  <link href="{% static 'css/select.css' %}" rel="stylesheet">
+  <link href="css/select.css" rel="stylesheet">
+  
+</head>
+
+
+
+<body>
+
+    <!-- /Start your project here-->
+
+    <div class="contain">
+
+
+        <!--Main Navigation-->
+        <header>
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark green scrolling-navbar">
+            <a class="navbar-brand" href="#"><strong>OSINT</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Search <span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Visualize</a>
+                </li>
+                </ul>
+            </div>
+            <button class="btn btn-info btn-block btConnection" type="submit" style="background-color: rgb(34, 66, 102); font-size: 0.8em;">Deconnexion</button>
+            </nav>
+            
+        
+        </header>
+        <!--Main Navigation-->
+
+        <div class="row header" style="background-color: rgb(77, 204, 134);">
+            <div class="col-3">
+                <!--<img src="images/LogoENSP.jpg" class="logo">-->
+                
+            </div>
+            <div class="col-6">
+                
+            </div>
+            
+        </div>
+        <br/>
+        
+        <div class="row">
+            <nav class="col-lg-3">
+              
+
+
+                              <!--Accordion wrapper-->
+              <div class="accordion md-accordion accordion-3 z-depth-1-half" id="accordionEx194" role="tablist"
+              aria-multiselectable="true">
+
+              <h2 class="text-center text-uppercase green-text py-4 px-3">Osint Tools</h2>
+
+              <hr class="mb-0">
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading1">
+                  <a data-toggle="collapse" data-parent="#accordionEx194" href="#collapse1" aria-expanded="true"
+                    aria-controls="collapse1">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Nom/Username <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_sherlock" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Sherlock</h4>  
+                            </a>
+                      </li>
+                        
+                            
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading2">
+                  <a data-toggle="collapse" data-parent="#accordionEx194" href="#collapse2" aria-expanded="true"
+                    aria-controls="collapse2">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Adresse Mail <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_infoga" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Infoga</h4>  
+                            </a>
+                      </li>
+                        
+                            
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading3">
+                  <a data-toggle="collapse" data-parent="#accordionEx194" href="#collapse3" aria-expanded="true"
+                    aria-controls="collapse3">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Numéro de Téléphone <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> PhoneInfoga</h4>  
+                            </a>
+                      </li>
+                        
+                            
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading4">
+                  <a data-toggle="collapse" data-parent="#accordionEx194" href="#collapse4" aria-expanded="true"
+                    aria-controls="collapse4">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Nom de Domaine <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="heading4"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_theHarvester" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> theHarvester</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_dnsrecon" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> DnsRecon</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_recon_domain" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng (Domaine)</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_sublist3r" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Sublist3r</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Google Safe Browsing API</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_dnstwist" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> DnsTwist</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_shodan" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Shodan</h4>  
+                            </a>
+                      </li>     
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading5">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse5"
+                    aria-expanded="false" aria-controls="collapse5">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Emplacement <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">                
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Google Maps</h4>  
+                            </a>
+                      </li>                   
+                  
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion card -->
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading6">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse6"
+                    aria-expanded="false" aria-controls="collapse6">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Image <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Face Recognition</h4>  
+                            </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading7">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse7"
+                    aria-expanded="false" aria-controls="collapse7">
+                    <h3 class="mb-0 mt-3 green-text">
+                      SOCMINT <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse7" class="collapse" role="tabpanel" aria-labelledby="heading7"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_twint" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Twint</h4>  
+                            </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="" class="list-group-item list-group-item-action" title="">
+                              <h4> <i class="fa fa-chevron-circle-right "></i>Instalooter</h4>  
+                          </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="intelligence/form_linkedInt" class="list-group-item list-group-item-action" title="">
+                            <h4> <i class="fa fa-chevron-circle-right "></i>LinkedInt</h4>  
+                        </a>
+                  </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading8">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse8"
+                    aria-expanded="false" aria-controls="collapse8">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Darknet <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse8" class="collapse" role="tabpanel" aria-labelledby="heading8"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_darksearch" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> darksearch</h4>  
+                            </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="intelligence/form_torBot" class="list-group-item list-group-item-action" title="">
+                              <h4> <i class="fa fa-chevron-circle-right "></i> torBot</h4>  
+                          </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="" class="list-group-item list-group-item-action" title="">
+                            <h4> <i class="fa fa-chevron-circle-right "></i>OnionScan</h4>  
+                        </a>
+                  </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion card -->
+              <div class="card">
+
+                <!-- Card header -->
+                <div class="card-header" role="tab" id="heading9">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx194" href="#collapse9"
+                    aria-expanded="false" aria-controls="collapse9">
+                    <h3 class="mb-0 mt-3 green-text">
+                      Outils automatisant et intégrant plusieurs outils <i class="fa fa-angle-down rotate-icon fa-1x"></i>
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Card body -->
+                <div id="collapse9" class="collapse" role="tabpanel" aria-labelledby="heading9"
+                  data-parent="#accordionEx194">
+                  <div class="card-body pt-0">
+
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                          <a href="intelligence/form_automater" class="list-group-item list-group-item-action" title="">
+                                <h4> <i class="fa fa-chevron-circle-right "></i> Automater</h4>  
+                            </a>
+                      </li>
+                      <li class="list-group-item">
+                        <a href="" class="list-group-item list-group-item-action" title="">
+                              <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng</h4>  
+                          </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="intelligence/form_recon_company" class="list-group-item list-group-item-action" title="">
+                            <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng (Company)</h4>  
+                        </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="intelligence/form_recon_contact" class="list-group-item list-group-item-action" title="">
+                          <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng (Contact)</h4>  
+                      </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="intelligence/form_recon_host" class="list-group-item list-group-item-action" title="">
+                        <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng (Host)</h4>  
+                    </a>
+              </li>
+              <li class="list-group-item">
+                <a href="intelligence/form_recon_profile" class="list-group-item list-group-item-action" title="">
+                      <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng (Profile)</h4>  
+                  </a>
+            </li>
+            <li class="list-group-item">
+              <a href="intelligence/form_recon_location" class="list-group-item list-group-item-action" title="">
+                    <h4> <i class="fa fa-chevron-circle-right "></i> Recon-ng (Location)</h4>  
+                </a>
+          </li>
+            
+                    <li class="list-group-item">
+                      <a href="intelligence/form_photon" class="list-group-item list-group-item-action" title="">
+                            <h4> <i class="fa fa-chevron-circle-right "></i> Photon</h4>  
+                        </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="intelligence/form_datasploit" class="list-group-item list-group-item-action" title="">
+                          <h4> <i class="fa fa-chevron-circle-right "></i> Datasploit</h4>  
+                      </a>
+                </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion card -->
+              </div>
+              <!--/.Accordion wrapper-->
+
+
+
+            </nav>
+            <section class="col-lg-9" >
+
+              <!--
+                  <form class ="row search-form form-inline ml-auto" action = "http://localhost:5000" method = "POST">
+
+                <select class="browser-default custom-select col-3" id="entities" name="entities" onchange="select_tools('entities','tools')">
+                    <option selected>Entities</option>
+                    <option id="email" value="email">Email</option>
+                    <option id="domain" value="domain">Domain</option>
+                    <option id="username" value="username">Username</option>
+                    <option id="ip" value="ip">IP address</option>
+                    <option id="company" value="company">Company</option>
+                    <option id="host" value="host">Host</option>
+                    <option id="contact" value="contact">Contact</option>
+                    <option id="location" value="location">Location</option>
+                </select>
+
+                <select class="selectpicker col-3" multiple data-live-search="true" id="tools" name="tools" disabled>
+                    <option selected>Tools</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <div class="col-3">
+                        <div class="md-form my-0">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name = "search">
+                            <button href="#!" class="btn btn-outline btn-md my-0 ml-sm-2" type="submit">Search</button>
+                        </div>
+                        
+                </div>
+               
+
+            </form>
+
+
+
+
+            <form class ="row search-form form-inline ml-auto" action = "http://localhost:5000" method = "POST">
+
+                <select class="browser-default custom-select col-3" id="entities" name="entities" onchange="select_tools('entities','tools')">
+                    <option selected>Entities</option>
+                    <option id="email" value="email">Email</option>
+                    <option id="domain" value="domain">Domain</option>
+                    <option id="username" value="username">Username</option>
+                    <option id="ip" value="ip">IP address</option>
+                    <option id="company" value="company">Company</option>
+                    <option id="host" value="host">Host</option>
+                    <option id="contact" value="contact">Contact</option>
+                    <option id="location" value="location">Location</option>
+                </select>
+
+                <select class="selectpicker col-3" multiple data-live-search="true" id="tools" name="tools" disabled>
+                    <option selected>Tools</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <div class="col-3">
+                        <div class="md-form my-0">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name = "search">
+                            <button href="#!" class="btn btn-outline btn-md my-0 ml-sm-2" type="submit">Search</button>
+                        </div>
+                        
+                </div>
+               
+
+            </form>
+
+            <select class="selectpicker" multiple data-live-search="true">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+              -->
+             
+                
+
+              
+
+
+              <div class="form-search">
+                  <form class="" action= "{% url 'request_theHarvester' %}" method="post">
+                    {% csrf_token %}
+                    {{ form_theHarvester.as_p }}
+                    {% if form_theHarvester.as_p %}
+                      <input type="submit" class="btn btn-primary" value="Submit" />
+                    {% endif %}
+                </form>
+              </div>
+
+              <div class="form-search">
+                <form class="" action= "{% url 'request_sherlock' %}" method="post">
+                  {% csrf_token %}
+                  {{ form_sherlock.as_p }}
+                  {% if form_sherlock.as_p %}
+                    <input type="submit" class="btn btn-primary" value="Submit" />
+                  {% endif %}
+              </form>
+            </div>
+            
+            <div class="form-search">
+              <form class="" action= "{% url 'request_infoga' %}" method="post">
+                {% csrf_token %}
+                {{ form_infoga.as_p }}
+                {% if form_infoga.as_p %}
+                  <input type="submit" class="btn btn-primary" value="Submit" />
+                {% endif %}
+            </form>
+          </div>
+
+          <div class="form-search">
+            <form class="" action= "{% url 'request_dnsrecon' %}" method="post">
+              {% csrf_token %}
+              {{ form_dnsrecon.as_p }}
+              {% if form_dnsrecon.as_p %}
+                <input type="submit" class="btn btn-primary" value="Submit" />
+              {% endif %}
+          </form>
+        </div>
+
+        <div class="form-search">
+          <form class="" action= "{% url 'request_sublist3r' %}" method="post">
+            {% csrf_token %}
+            {{ form_sublist3r.as_p }}
+            {% if form_sublist3r.as_p %}
+              <input type="submit" class="btn btn-primary" value="Submit" />
+            {% endif %}
+        </form>
+      </div>
+
+      <div class="form-search">
+        <form class="" action= "{% url 'request_dnstwist' %}" method="post">
+          {% csrf_token %}
+          {{ form_dnstwist.as_p }}
+          {% if form_dnstwist.as_p %}
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          {% endif %}
+      </form>
+    </div>
+
+      <div class="form-search">
+        <form class="" action= "{% url 'request_linkedInt' %}" method="post">
+          {% csrf_token %}
+          {{ form_linkedInt.as_p }}
+          {% if form_linkedInt.as_p %}
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          {% endif %}
+      </form>
+    </div>
+
+    <div class="form-search">
+        <form class="" action= "{% url 'request_twint' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+          {% csrf_token %}
+          {{ form_twint.as_p }}
+          {% if form_twint.as_p %}
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          {% endif %}
+      </form>
+    </div>
+    
+    <div class="form-search">
+        <form class="" action= "{% url 'request_photon' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+          {% csrf_token %}
+          {{ form_photon.as_p }}
+          {% if form_photon.as_p %}
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          {% endif %}
+      </form>
+    </div>
+
+    <div class="form-search">
+        <form class="" action= "{% url 'request_automater' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+          {% csrf_token %}
+          {{ form_automater.as_p }}
+          {% if form_automater.as_p %}
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          {% endif %}
+      </form>
+    </div>
+
+    <div class="form-search">
+        <form class="" action= "{% url 'request_datasploit' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+          {% csrf_token %}
+          {{ form_datasploit.as_p }}
+          {% if form_datasploit.as_p %}
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          {% endif %}
+      </form>
+    </div>
+
+    <div class="form-search">
+      <form class="" action= "{% url 'request_recon_domain' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+        {% csrf_token %}
+        {{ form_recon_domain.as_p }}
+        {% if form_recon_domain.as_p %}
+          <input type="submit" class="btn btn-primary" value="Submit" />
+        {% endif %}
+    </form>
+  </div>
+  
+  <div class="form-search">
+    <form class="" action= "{% url 'request_recon_company' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+      {% csrf_token %}
+      {{ form_recon_company.as_p }}
+      {% if form_recon_company.as_p %}
+        <input type="submit" class="btn btn-primary" value="Submit" />
+      {% endif %}
+  </form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_recon_contact' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_recon_contact.as_p }}
+    {% if form_recon_contact.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_recon_host' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_recon_host.as_p }}
+    {% if form_recon_host.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_recon_profile' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_recon_profile.as_p }}
+    {% if form_recon_profile.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_recon_location' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_recon_location.as_p }}
+    {% if form_recon_location.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_darksearch' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_darksearch.as_p }}
+    {% if form_darksearch.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_torBot' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_torBot.as_p }}
+    {% if form_torBot.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+<div class="form-search">
+  <form class="" action= "{% url 'request_shodan' %}" method="post" style="text-align: center; width:90%; align-content: right;">
+    {% csrf_token %}
+    {{ form_shodan.as_p }}
+    {% if form_shodan.as_p %}
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    {% endif %}
+</form>
+</div>
+
+            <div class="card text-center" style="margin-left: auto; margin-right:auto; width:95%">
+              <div class="card-header">Results</div>
+              <div class="card-body">
+
+                  
+                  <table class="table">
+                      <thead>
+                          <tr>
+                            <th scope="col">Elements</th>
+                            <th scope="col">Results</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          {% for key, value in result.items%}
+                            <tr>
+                                <th>{{key}}</th>
+                                <td>{{value}}</td>
+                              </tr>
+                          {%endfor%}
+
+
+
+                          {% for key, value in result_tweet.items%}
+                            {% if key == "data" %}                        
+                              {% for val in value %}
+                              <tr>
+                                <th>{{forloop.counter}}</th>
+                                <td>{{val}}</td>
+                              </tr>
+                              {% endfor %}
+                            {% elif key == 'folowers' %}
+                              {% for val in value %}
+                              <tr>
+                                <th>{{forloop.counter}}</th>
+                                <td>{{val}}</td>
+                              </tr>
+                              {% endfor %}
+                            {% else %}
+                            <tr>
+                                <th>{{key}}</th>
+                                <td>{{value}}</td>
+                              </tr>                     
+                            {%endif%}
+                          {%endfor%}
+
+                          {% for key, value in result_linkedInt.items %}
+                            
+                              {% if key == "target" %}
+                              <tr>
+                                <th>{{key}}</th>
+                                <td>{{value}}</td>
+                              </tr>
+                              {% else %}
+                                {% for val in value %}
+                                <tr>
+                                  <th>{{forloop.counter}}</th>
+                                  <td>{{val}}</td>
+                                </tr>
+                                {% endfor %}
+                              {% endif %}
+                            
+                          {%endfor%}
+
+                          
+                        {% for val in results%}
+                            {% for v in val %}
+                              <tr>
+                                <th>{{forloop.counter}}</th>
+                                <td>{{v}}</td>
+                              </tr>
+                            {%endfor%}                     
+                        {%endfor%}
+
+                        
+                        {% for val in data%}
+                              {%for key, value in val.items%}
+                                <tr>
+                                  <th>{{key}}</th>
+                                  <td>{{value}}</td>
+                                </tr> 
+                              {%endfor%}
+                        {%endfor%}
+                            
+                          </tbody>
+                    </table>
+
+                 
+                  <div class="tab-content" id="myTabContent">
+
+                                                 
+                                                  
+                      
+                  </div>         
+
+                  
+              </div>
+              
+          </div>
+                    
+
+                 
+
+            </section>
+          </div>
+
+        <br/>
+        
+
+           
+                
+            
+                      
+
+            
+            
+           
+        
+
+         
+                
+
+                
+            
+
+          
+
+        <br/>
+
+
+        <div class="row">
+
+            
+        
+
+        </div>
+
+
+
+
+
+        
+
+        
+
+        
+
+
+    </div>
+
+
+    
+
+    
+
+
+    
+<!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+<!--
+  <script type="text/javascript" src="mdbpro/jquery-3.3.1.min.js"></script>
+ <script type="text/javascript" src="mdbpro/popper.min.js"></script>
+  <script type="text/javascript" src="mdbpro/compiled.min.js"></script>
+-->
+
+<!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+
+  <script type="text/javascript" src="{% static 'js/datepicker.min.js' %}"></script>
+  <script type="text/javascript" src="js/datepicker.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/datepicker.fr.js' %}"></script>
+  <script type="text/javascript" src="js/datepicker.fr.js"></script>
+
+  <script type="text/javascript" src="{% static 'js/js_all.js' %}"></script>
+  <script type="text/javascript" src="js/js_all.js"></script>
+  <script>
+    // Data Picker Initialization
+    
+    
+    //$('.datepickerEnd').pickadate();
+    
+      $('select').selectpicker();
+
+      
+
+
+      function change(){
+        var select_twint = document.getElementById("function-twint");
+          var search_twint = document.getElementById("search-twint");
+
+          if (select_twint.value == "tweet"){
+            search_twint.style.display = "block";
+          }
+          if(select_twint.value == "followers"){
+            search_twint.style.display = "none";
+          
+          }
+
+      }
+      
+      var select_twint = document.getElementById("function-twint");
+      var search_twint = document.getElementById("search-twint");
+
+      /*
+      if (select_twint.value == "tweet"){
+        search_twint.style.display = "block";
+      }
+      if(select_twint.value == "followers"){
+        search_twint.style.display = "none";
+      }
+      */
+      
+      
+      
+    
+      </script>
+    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

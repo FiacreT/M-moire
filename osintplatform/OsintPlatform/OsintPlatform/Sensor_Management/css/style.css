@@ -1,0 +1,97 @@
+h3{
+	font-size: 1.3em;
+}
+h2{
+	font-size: 1.8em;
+}
+h4{
+	font-size: 0.8em;
+}
+.form-connexion{
+	width: 30%;
+ 	margin-left: auto;
+ 	margin-right: auto; 
+ 	background-color: white;
+ 	border-radius: 10px;
+ 	margin-top:10%;
+}
+
+.logo{
+	height: 10px;
+}
+
+.header{
+	height: 10%;
+	margin-top: 4em;
+	
+}
+
+
+
+body{
+	width: 100%;
+}
+
+
+
+.title-style{
+	text-align: left;
+	width: 100%;
+	padding:0.1em;
+	line-height: 1.2em;
+	font-size: 1em;
+	border:solid #ff6600 thin;
+
+}
+
+.nomarging{
+   margin:0em !important;
+}
+.size-text{
+	font-size: 4em;
+	text-align: left;
+}
+
+
+.panel-title{
+	display: inline;
+	font-size: 1.2em;
+}
+
+
+
+.butSearch{
+	background-color: rgb(34,102,102) !important;
+	color:black !important;
+}
+
+#myTabJust li a.active{
+	background-color: rgb(132, 180, 180);
+}
+
+.btConnection{
+	width:10% !important;
+	min-width: 8em !important;
+}
+
+.btn-info {
+    background-color: #7b7668!important;
+    /* color: #fff!important; */
+}
+
+
+.contain {
+	padding-right: 1em;
+	padding-left: 1em;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100% ;
+  }
+
+.search-form{
+	width: 100%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 12em;
+}

@@ -1,0 +1,2 @@
+http://www.crtv.cm/wp-admin/
+http://www.crtv.cm/wp-admin/admin-ajax.php

@@ -1,0 +1,58 @@
+language: rust
+
+# upload takes too long on windows and gets killed due to inactivity
+#cache: cargo
+
+matrix:
+  include:
+  - os: linux
+    rust: stable
+    env:
+    - BUILD_MODE=test
+  - os: linux
+    rust: stable
+    env:
+    - BUILD_MODE=common
+  - os: linux
+    rust: stable
+    env:
+    - BUILD_MODE=boxxy
+  - os: linux
+    rust: stable
+    env:
+    - BUILD_MODE=docker
+  - os: linux
+    rust: stable
+    env:
+    - BUILD_MODE=docker-registry
+  - os: osx
+    rust: stable
+    env:
+    - BUILD_MODE=test
+  - os: osx
+    rust: stable
+    env:
+    - BUILD_MODE=common
+  #- os: windows
+  #  rust: stable
+  #  env:
+  #  - BUILD_MODE="windows test"
+  - os: windows
+    rust: stable
+    env:
+    - BUILD_MODE="windows common"
+
+before_install:
+- ci/setup.sh "$TRAVIS_OS_NAME"
+script:
+- df -h
+- ci/run.sh $BUILD_MODE
+- df -h
+
+notifications:
+  irc:
+    channels:
+    - "ircs://irc.hackint.org:6697/#sn0int"
+    #on_success: change # default: always
+    #on_failure: always # default: always
+    use_notice: true

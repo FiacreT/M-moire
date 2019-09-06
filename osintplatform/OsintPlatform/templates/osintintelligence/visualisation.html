@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sensor Mangement - home page</title>
+  {% load static %}
+  <!-- Font Awesome -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) 
+  <link href="{% static 'css/mdbpro/mdbpro.css' %}" rel="stylesheet">-->
+  <link href="{% static 'css/style_mdb.css' %}" rel="stylesheet">
+  <link href="css/style_mdb.css" rel="stylesheet">
+
+  
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+-->
+<link href="{% static 'css/datepicker.min.css' %}" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+
+  <link href="{% static 'css/select.css' %}" rel="stylesheet">
+  <link href="css/select.css" rel="stylesheet">
+  
+</head>
+
+
+
+<body>
+
+    <!-- /Start your project here-->
+
+    <div class="contain">
+
+
+        <!--Main Navigation-->
+        <header>
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark green scrolling-navbar">
+            <a class="navbar-brand" href="#"><strong>OSINT</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Search</a>
+                </li>
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Visualize <span class="sr-only">(current)</span></a>
+                </li>
+                </ul>
+            </div>
+            <button class="btn btn-info btn-block btConnection" type="submit" style="background-color: rgb(34, 66, 102); font-size: 0.8em;">Deconnexion</button>
+            </nav>
+            
+        
+        </header>
+        <!--Main Navigation-->
+
+        <div class="row header" style="background-color: rgb(77, 204, 134);">
+            <div class="col-3">
+                <!--<img src="images/LogoENSP.jpg" class="logo">-->
+                
+            </div>
+            <div class="col-6">
+                
+            </div>
+            
+        </div>
+        <br/>
+        
+        <div class="row">
+           
+            <section class="col-lg-9" >
+
+              <!--
+                  <form class ="row search-form form-inline ml-auto" action = "http://localhost:5000" method = "POST">
+
+                <select class="browser-default custom-select col-3" id="entities" name="entities" onchange="select_tools('entities','tools')">
+                    <option selected>Entities</option>
+                    <option id="email" value="email">Email</option>
+                    <option id="domain" value="domain">Domain</option>
+                    <option id="username" value="username">Username</option>
+                    <option id="ip" value="ip">IP address</option>
+                    <option id="company" value="company">Company</option>
+                    <option id="host" value="host">Host</option>
+                    <option id="contact" value="contact">Contact</option>
+                    <option id="location" value="location">Location</option>
+                </select>
+
+                <select class="selectpicker col-3" multiple data-live-search="true" id="tools" name="tools" disabled>
+                    <option selected>Tools</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <div class="col-3">
+                        <div class="md-form my-0">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name = "search">
+                            <button href="#!" class="btn btn-outline btn-md my-0 ml-sm-2" type="submit">Search</button>
+                        </div>
+                        
+                </div>
+               
+
+            </form>
+
+
+
+
+            <form class ="row search-form form-inline ml-auto" action = "http://localhost:5000" method = "POST">
+
+                <select class="browser-default custom-select col-3" id="entities" name="entities" onchange="select_tools('entities','tools')">
+                    <option selected>Entities</option>
+                    <option id="email" value="email">Email</option>
+                    <option id="domain" value="domain">Domain</option>
+                    <option id="username" value="username">Username</option>
+                    <option id="ip" value="ip">IP address</option>
+                    <option id="company" value="company">Company</option>
+                    <option id="host" value="host">Host</option>
+                    <option id="contact" value="contact">Contact</option>
+                    <option id="location" value="location">Location</option>
+                </select>
+
+                <select class="selectpicker col-3" multiple data-live-search="true" id="tools" name="tools" disabled>
+                    <option selected>Tools</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+                <div class="col-3">
+                        <div class="md-form my-0">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name = "search">
+                            <button href="#!" class="btn btn-outline btn-md my-0 ml-sm-2" type="submit">Search</button>
+                        </div>
+                        
+                </div>
+               
+
+            </form>
+
+            <select class="selectpicker" multiple data-live-search="true">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+              -->
+             
+                
+
+              
+
+
+              <div class="form-search" style="margin: auto; margin-left: 18em; text-align: center; width: 95%;">
+                  <form class="" action= "{% url 'search' %}" method="post" style="text-align: center; display: inline;">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-primary" value="Rechercher" />
+                </form>
+              </div>
+
+            
+
+           
+            <div class="card text-center" style="margin-left: auto; margin-right:auto; width:95%; margin-left: 18em;">
+              <div class="card-header">Results</div>
+              <div class="card-body">
+                <ul>
+                    {% for value in result_search %}
+                        <li>{{ value }}</li>
+                    {% endfor %}
+                    </ul>
+                  
+            
+                  <div class="tab-content" id="myTabContent">
+
+                                                 
+                                                  
+                      
+                  </div>         
+
+                  
+              </div>
+              
+          </div>
+                    
+
+                 
+
+            </section>
+          </div>
+
+        <br/>
+        
+
+           
+                
+            
+                      
+
+            
+            
+           
+        
+
+         
+                
+
+                
+            
+
+          
+
+        <br/>
+
+
+        <div class="row">
+
+            
+        
+
+        </div>
+
+
+
+
+
+        
+
+        
+
+        
+
+
+    </div>
+
+
+    
+
+    
+
+
+    
+<!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+<!--
+  <script type="text/javascript" src="mdbpro/jquery-3.3.1.min.js"></script>
+ <script type="text/javascript" src="mdbpro/popper.min.js"></script>
+  <script type="text/javascript" src="mdbpro/compiled.min.js"></script>
+-->
+
+<!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+
+  <script type="text/javascript" src="{% static 'js/datepicker.min.js' %}"></script>
+  <script type="text/javascript" src="js/datepicker.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/datepicker.fr.js' %}"></script>
+  <script type="text/javascript" src="js/datepicker.fr.js"></script>
+
+  <script type="text/javascript" src="{% static 'js/js_all.js' %}"></script>
+  <script type="text/javascript" src="js/js_all.js"></script>
+  <script>
+    // Data Picker Initialization
+    
+    
+    //$('.datepickerEnd').pickadate();
+    
+      $('select').selectpicker();
+
+      var slider1 = document.getElementById("myRange1");
+      var output1 = document.getElementById("demo1");
+      var sliderAdd =  document.getElementById("myRangeAdd");
+      var outputAdd = document.getElementById("demoAdd");
+      
+      outputAdd.innerHTML = sliderAdd.value;
+      output1.innerHTML = slider1.value;
+     
+        
+      slider1.oninput = function() {
+        output1.innerHTML = this.value;
+      }
+      
+      sliderAdd.oninput = function() {
+        outputAdd.innerHTML = this.value;
+      }
+    
+      </script>
+    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

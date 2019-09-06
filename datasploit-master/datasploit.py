@@ -174,4 +174,4 @@ class Datasploit(Resource):
 if __name__ == "__main__":
    #main(sys.argv[1:])
    api.add_resource(Datasploit, "/datasploit/<string:target>")
-   app.run(debug=True)
+   app.run(debug=True, port=5002, threaded=True)

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sensor Mangement - home page</title>
+        <!-- Font Awesome -->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <!-- Bootstrap core CSS 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <link href="css/style_mdb.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/select.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        <link href="css/select.css" rel="stylesheet">
+        -->
+
+
+
+
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="{{ url_for('static', filename='css/mdb.min.css') }}" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="{{ url_for('static', filename='css/style_mdb.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--
+        <link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        -->
+        
+        <link href="{{ url_for('static', filename='css/datepicker.min.css') }}" rel="stylesheet">
+        
+        <link href="{{ url_for('static', filename='css/select.css') }}" rel="stylesheet">
+
+        
+    
+    </head>
+
+    <body>
+
+        <!-- /Start your project here-->
+
+        <div class="contain">
+
+
+            <!--Main Navigation-->
+            <header>
+
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark green scrolling-navbar">
+                <a class="navbar-brand" href="#"><strong>OSINT</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Search <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="darkweb_osint.html">DarkWeb</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Visualize</a>
+                    </li>
+                    </ul>
+                </div>
+                </nav>
+            
+            </header>
+            <!--Main Navigation-->
+
+            <div class="row header" style="background-color: rgb(77, 204, 134);">
+                <div class="col-3">
+                    <!--<img src="images/LogoENSP.jpg" class="logo">-->
+                    
+                </div>
+                <div class="col-6">
+                    
+                </div>
+                <div class="col-2" style=" margin-left: auto; margin-right: 50px;">
+                    <button class="btn btn-info btn-block my-4 btConnection" type="submit" style="background-color: rgb(34, 66, 102); font-size: 0.8em;">Deconnexion</button>
+                </div>
+            </div>
+            <br/>
+            
+
+                <form class ="row search-form form-inline ml-auto" action = "http://localhost:5000" method = "POST">
+
+                    <select class="browser-default custom-select col-3" id="entities" name="entities" onchange="select_tools('entities','tools')">
+                        <option selected>Entities</option>
+                        <option id="email" value="email">Email</option>
+                        <option id="domain" value="domain">Domain</option>
+                        <option id="username" value="username">Username</option>
+                        <option id="ip" value="ip">IP address</option>
+                        <option id="company" value="company">Company</option>
+                        <option id="host" value="host">Host</option>
+                        <option id="contact" value="contact">Contact</option>
+                        <option id="location" value="location">Location</option>
+                    </select>
+
+                    <select class="selectpicker col-3" multiple data-live-search="true" id="tools" name="tools" disabled>
+                        <option selected>Tools</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+
+                    <div class="col-3">
+                            <div class="md-form my-0">
+                                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name = "search">
+                                <button href="#!" class="btn btn-outline btn-md my-0 ml-sm-2" type="submit">Search</button>
+                            </div>
+                            
+                    </div>
+                   
+
+                </form>
+                    
+                
+                          
+
+                
+                
+               
+            
+
+             
+                    
+
+                    
+                
+
+              
+
+            <br/>
+
+
+            <div class="row">
+
+                <div class="card text-center" style="margin-left: auto; margin-right:auto; width:95%">
+                    <div class="card-header">Results</div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            {% if results_|length != 0 %}
+                                {% for tool, result in results_.items() %}
+                                    {% if loop.index == 1 %}
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="{{ tool }}-tab" data-toggle="tab" href="#{{ tool }}" role="tab" aria-controls="{{ tool }}"
+                                        aria-selected="true">{{ tool }}
+                                    </a>                          
+                                    </li>
+                                    {% else %}
+                                    <li class="nav-item">
+                                            <a class="nav-link" id="{{ tool }}-tab" data-toggle="tab" href="#{{ tool }}" role="tab" aria-controls="{{ tool }}"
+                                            aria-selected="true">{{ tool }}
+                                        </a>                          
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                                aria-selected="true">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                                aria-selected="false">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact_" role="tab" aria-controls="contact_"
+                                aria-selected="false">Contact</a>
+                            </li>
+                            -->
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+
+                            {% if results_|length != 0 %}
+
+                                {% for tool, result in results_.items() %}
+                                
+                                    {% if loop.index == 1 %}
+                                    <div class="tab-pane fade show active" id="{{ tool }}" role="tabpanel" aria-labelledby="{{ tool }}-tab">.aaaaaa..
+                                        {% for tab in result%}
+                                            {{tab}}
+                                        {%endfor%}
+                                        
+                                        
+                                    </div>
+                                    {% else %}
+                                    <div class="tab-pane fade" id="{{ tool }}" role="tabpanel" aria-labelledby="{{ tool }}-tab">.bbbbbbaaaa..
+                                        {% for tab in result%}
+                                            {{tab}}
+                                        {%endfor%}                                        
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+
+                            {% endif %}                            
+                            
+                                
+
+                            <!--
+                            {% for tool in tool_tab %}
+                                {% if loop.index == 1 %}
+                                <div class="tab-pane fade show active" id="{{ tool }}" role="tabpanel" aria-labelledby="{{ tool }}-tab">.aaaaaa..
+                                    {% for result in tab_result%}
+                                        {{result}}
+                                    {%endfor%}
+                                    
+                                </div>
+                                {% else %}
+                                <div class="tab-pane fade" id="{{ tool }}" role="tabpanel" aria-labelledby="{{ tool }}-tab">.bbbbbbaaaa..
+                                        
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            -->
+
+                            <!--
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..bbbbbbbbb.</div>
+                            <div class="tab-pane fade" id="contact_" role="tabpanel" aria-labelledby="contact-tab">.cccccccccc..</div>
+                            -->
+                        </div>
+                    
+
+
+
+
+                        <button href="#!" class="btn btn-primary">Store</button>
+                    </div>
+                    
+                </div>
+            
+
+            </div>
+
+
+
+
+
+            
+
+            
+
+            
+
+    
+        </div>
+    
+
+        
+
+        
+
+
+        
+
+
+
+
+
+        <!-- SCRIPTS -->
+        <script>
+            $(document).ready(function() {
+            $('.mdb-select').materialSelect();
+            });
+        </script>
+        <!-- JQuery -->
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/js_all.js') }}"></script>
+
+        <!-- without flask
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <script type="text/javascript" src="js/js_all.js"></script>
+        -->
+        <!-- 
+        <script type="text/javascript" src="mdbpro/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="mdbpro/popper.min.js"></script>
+        <script type="text/javascript" src="mdbpro/compiled.min.js"></script>
+        -->
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        
+        
+        
+    
+    </body>
+
+</html>

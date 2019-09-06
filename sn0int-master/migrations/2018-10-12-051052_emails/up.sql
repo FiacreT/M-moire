@@ -1,0 +1,5 @@
+CREATE TABLE emails (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    value VARCHAR NOT NULL,
+    CONSTRAINT email_unique UNIQUE (value)
+);

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sensor Mangement - home page</title>
+  {% load static %}
+  <!-- Font Awesome -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) 
+  <link href="{% static 'css/mdbpro/mdbpro.css' %}" rel="stylesheet">-->
+  <link href="{% static 'css/style_mdb.css' %}" rel="stylesheet">
+  
+  <link href="css/style_mdb.css" rel="stylesheet">
+
+  
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+-->
+<link href="{% static 'css/datepicker.min.css' %}" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+
+  <link href="{% static 'css/select.css' %}" rel="stylesheet">
+  <link href="css/select.css" rel="stylesheet">
+  
+</head>
+
+
+
+<body>
+
+    <!-- /Start your project here-->
+
+    <div class="contain">
+
+
+        <!--Main Navigation-->
+        <header>
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark green scrolling-navbar">
+            <a class="navbar-brand" href="#"><strong>OSINT</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Administration <span class="sr-only">(current)</span></a>
+                </li>
+                </ul>
+            </div>
+            <button class="btn btn-info btn-block btConnection" type="submit" style="background-color: rgb(34, 66, 102); font-size: 0.8em;">Deconnexion</button>
+            </nav>
+            
+        
+        </header>
+        <!--Main Navigation-->
+        <br/>
+        <div class="row header">
+            
+            
+                <ul class="nav nav-tabs" id="myTabMD" role="tablist" >
+                        <li class="nav-item">
+                          <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab" aria-controls="home-md"
+                            aria-selected="true">Gestion d'outils</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab" aria-controls="profile-md"
+                            aria-selected="false">Modifier paramètres connexion</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab" aria-controls="contact-md"
+                            aria-selected="false">Mettre à jour clé API</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="log-tab-md" data-toggle="tab" href="#log-md" role="tab" aria-controls="log-md"
+                                  aria-selected="false">Télécharger fichiers logs</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content card pt-5" id="myTabContentMD">
+                        <div class="tab-pane fade show active" id="home-md" role="tabpanel" aria-labelledby="home-tab-md" style="text-align: center">
+                                <table class="table" id ="tableCapteur" style="width: 60%; margin-left: 5em;">
+                                        <thead id ="headTable">
+                                          <tr>
+                                            <th>Outils</th>
+                                            <th>Etat</th>
+                                            <th>Suppression</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="bodyTable">
+                                                {% for key, value in tools.items %}
+                                                <tr id="{{key}}">
+                                                <td class="typeCapteurs">
+                                                        {{key}}
+                                                </td>
+                                                <td>
+                                                    <!-- Default checked -->
+                                                    <label class="bs-switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round" style="height:33px;"></span>
+                                                    </label>
+                                                </td>
+                                                <td style="margin-left: auto; margin-right: auto">
+                                                  <!-- Default checked -->
+                                                   <div class="custom-control custom-checkbox" style="text-align: center; margin: auto;">
+                                                       <input type="checkbox" class="custom-control-input" id="{{key}}-Checked">
+                                                       <label class="custom-control-label" for="{{key}}-Checked">Supprimer</label>
+                                                   </div>
+                                               </td>
+                                                  
+                                                </tr>
+                                                {%endfor%}
+
+                                                 
+                                        </tbody>
+                                      </table>
+                                
+                                <p style="color: white"> Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                                        Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+                                        farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip
+                                        jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna
+                                        delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan
+                                        fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry
+                                        richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus
+                                        tattooed echo park.</p>
+                                        <button type="button" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                        <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
+                          <p>
+
+                              <form class ="form-pass" style="color: black !important; text-align: right">
+                                  <label for="user">User</label>
+                                  <select class="select-user" name="user">
+                                      <option selected>Administrateur</option>
+                                      <option value="1">Enquêteur</option>
+                                    </select>
+                                <label for="oldpass">Ancien mot de passe</label>
+                                <input class="form-control" type="password" name = "oldpass">
+                                <label for="newpass">Nouveau mot de passe</label>
+                                <input class="form-control" type="password" name = "newpass">
+                                <label for="newpassc">Confirmer le nouveau mot de passe</label>
+                                <input class="form-control" type="password" name = "newpassc"><br/>
+                                <button type="button" class="btn btn-primary">Modifier le mot de passe</button>
+                
+                              
+                               
+                
+                            </form>
+                            
+                           </p>
+                        </div>
+                        <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+                          <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                            retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                            iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                            Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+                            pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                            them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                        </div>
+                        <div class="tab-pane fade" id="log-md" role="tabpanel" aria-labelledby="log-tab-md">
+                                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                                  retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                                  iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                  Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+                                  pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                  them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                              </div>
+                      </div>
+
+
+            
+        </div>
+       
+        
+       
+
+      
+        
+
+           
+                
+            
+                      
+
+            
+            
+           
+        
+
+         
+                
+
+                
+            
+
+          
+
+        <br/>
+
+
+        <div class="row">
+
+            
+        
+
+        </div>
+
+
+
+
+
+        
+
+        
+
+        
+
+
+    </div>
+
+
+    
+
+    
+
+
+    
+<!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+<!--
+  <script type="text/javascript" src="mdbpro/jquery-3.3.1.min.js"></script>
+ <script type="text/javascript" src="mdbpro/popper.min.js"></script>
+  <script type="text/javascript" src="mdbpro/compiled.min.js"></script>
+-->
+
+<!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+
+  <script type="text/javascript" src="{% static 'js/datepicker.min.js' %}"></script>
+  <script type="text/javascript" src="js/datepicker.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/datepicker.fr.js' %}"></script>
+  <script type="text/javascript" src="js/datepicker.fr.js"></script>
+
+  <script type="text/javascript" src="{% static 'js/js_all.js' %}"></script>
+  <script type="text/javascript" src="js/js_all.js"></script>
+  <script>
+    // Data Picker Initialization
+    
+    
+    //$('.datepickerEnd').pickadate();
+    
+      $('select').selectpicker();
+
+      var slider1 = document.getElementById("myRange1");
+      var output1 = document.getElementById("demo1");
+      var sliderAdd =  document.getElementById("myRangeAdd");
+      var outputAdd = document.getElementById("demoAdd");
+      
+      outputAdd.innerHTML = sliderAdd.value;
+      output1.innerHTML = slider1.value;
+     
+        
+      slider1.oninput = function() {
+        output1.innerHTML = this.value;
+      }
+      
+      sliderAdd.oninput = function() {
+        outputAdd.innerHTML = this.value;
+      }
+    
+      </script>
+    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

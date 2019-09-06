@@ -1,0 +1,2 @@
+[+] Email: hervesoubgui57@gmail.com (64.233.188.26, 108.177.119.27, 74.125.199.26, 108.177.9.27, 74.125.200.27)
+%s- Not found information (on shodan) for this email, search this ip/ips on internet.. >> This email wasn't leaked

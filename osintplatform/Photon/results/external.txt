@@ -1,0 +1,3 @@
+https://www.joomla.org
+https://antic.cm/index.php?option=com_users&view=reset
+https://antic.cm/index.php?option=com_users&view=remind
