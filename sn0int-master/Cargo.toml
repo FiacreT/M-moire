@@ -92,7 +92,7 @@ nude = "0.2"
 caps = "0.3"
 #syscallz = { path="../syscallz-rs" }
 syscallz = "0.11"
-nix = "0.14"
+nix = "0.20"
 
 [target.'cfg(target_os="openbsd")'.dependencies]
 pledge = "0.3.1"
